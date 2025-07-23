@@ -7,33 +7,33 @@
   <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
-  <header>
-    <div class="logo">Agência Criativa Web</div>
-    <nav>
-      <ul class="menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#sobre">Sobre Nós</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#depoimentos">Depoimentos</a></li>
-        <li><a href="#contato">Contato</a></li>
+  <header class="header">
+    <div class="header__logo">Agência Criativa Web</div>
+    <nav class="header__nav">
+      <ul class="nav__menu">
+        <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+        <li class="nav__item"><a href="#sobre" class="nav__link">Sobre Nós</a></li>
+        <li class="nav__item"><a href="#servicos" class="nav__link">Serviços</a></li>
+        <li class="nav__item"><a href="#depoimentos" class="nav__link">Depoimentos</a></li>
+        <li class="nav__item"><a href="#contato" class="nav__link">Contato</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section id="home">
-      <h1>Transformamos ideias em experiências digitais</h1>
-      <p>Soluções criativas para sua marca se destacar no digital.</p>
+  <main class="main">
+    <section class="section section--home" id="home">
+      <h1 class="section__title section__title--gradient">Transformamos ideias em experiências digitais</h1>
+      <p class="section__subtitle">Soluções criativas para sua marca se destacar no digital.</p>
     </section>
 
-    <section id="sobre">
-      <h2>Sobre Nós</h2>
-      <p>Somos uma agência apaixonada por design, tecnologia e inovação. Nosso foco é criar experiências únicas que conectam marcas e pessoas.</p>
+    <section class="section" id="sobre">
+      <h2 class="section__title">Sobre Nós</h2>
+      <p class="section__text">Somos uma agência apaixonada por design, tecnologia e inovação. Nosso foco é criar experiências únicas que conectam marcas e pessoas.</p>
     </section>
 
-    <section id="servicos">
-      <h2>Serviços</h2>
-      <div class="grid-servicos">
+    <section class="section" id="servicos">
+      <h2 class="section__title">Serviços</h2>
+      <div class="servicos__grid">
         <div class="servico">Design Gráfico</div>
         <div class="servico">Desenvolvimento Web</div>
         <div class="servico">Branding</div>
@@ -43,29 +43,29 @@
       </div>
     </section>
 
-    <section id="depoimentos">
-      <h2>Depoimentos</h2>
-      <blockquote>"A Agência Criativa Web levou nosso projeto a outro nível. Atendimento impecável!" – Cliente Fictício 1</blockquote>
-      <blockquote>"Criativos, profissionais e pontuais. Recomendo de olhos fechados!" – Cliente Fictício 2</blockquote>
+    <section class="section" id="depoimentos">
+      <h2 class="section__title">Depoimentos</h2>
+      <blockquote class="depoimento">"A Agência Criativa Web levou nosso projeto a outro nível. Atendimento impecável!" – Cliente Fictício 1</blockquote>
+      <blockquote class="depoimento">"Criativos, profissionais e pontuais. Recomendo de olhos fechados!" – Cliente Fictício 2</blockquote>
     </section>
 
-    <section id="contato">
-      <h2>Contato</h2>
-      <p>Endereço: Agencia Ribeirao Preto</p>
-      <p>Telefone: (11) 99999-9999</p>
-      <p>E-mail: dereckkawakami@gmail.com</p>
+    <section class="section" id="contato">
+      <h2 class="section__title">Contato</h2>
+      <p class="section__text">Endereço: Agência Ribeirão Preto</p>
+      <p class="section__text">Telefone: (11) 99999-9999</p>
+      <p class="section__text">E-mail: dereckkawakami@gmail.com</p>
 
-      <form>
-        <input type="text" placeholder="Seu nome" required />
-        <input type="email" placeholder="Seu e-mail" required />
-        <textarea placeholder="Sua mensagem" required></textarea>
-        <button type="submit">Enviar</button>
+      <form class="form">
+        <input type="text" class="form__input" placeholder="Seu nome" required />
+        <input type="email" class="form__input" placeholder="Seu e-mail" required />
+        <textarea class="form__textarea" placeholder="Sua mensagem" required></textarea>
+        <button type="submit" class="form__button">Enviar</button>
       </form>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Agência Criativa Web. Todos os direitos reservados.</p>
+  <footer class="footer">
+    <p class="footer__text">&copy; 2025 Agência Criativa Web. Todos os direitos reservados.</p>
   </footer>
 </body>
 </html>
