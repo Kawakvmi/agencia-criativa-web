@@ -1,0 +1,77 @@
+@use "variaveis" as v;
+@use "mixins" as m;
+
+/* Header */
+.header {
+  @include m.glass();
+  @include m.flex-center;
+  justify-content: space-between;
+  padding: v.$space v.$space-2;
+  margin-bottom: v.$space-2;
+
+  &__logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    @include m.gradient-text();
+  }
+
+  &__nav {
+    .nav__menu {
+      list-style: none;
+      display: flex;
+      gap: v.$space-2;
+
+      .nav__item { /* reservado para modificadores futuros */ }
+
+      .nav__link {
+        text-decoration: none;
+        color: v.$color-white;
+        font-weight: 500;
+        transition: color 0.3s ease;
+
+        &:hover { color: v.$brand-from; }
+      }
+    }
+  }
+
+  @include m.up-to(md) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .nav__menu {
+      flex-direction: column;
+      gap: v.$space;
+    }
+  }
+}
+
+/* Main Sections (estrutura) */
+.section {
+  margin-bottom: v.$space-3;
+  background: rgba(255, 255, 255, v.$alpha-05);
+  border-radius: (v.$radius - 2px); // operador
+  padding: v.$space-2;
+  box-shadow: v.$shadow-soft;
+
+  &__title {
+    font-size: 1.8rem;
+    margin-bottom: v.$space;
+
+    &--gradient { 
+      font-size: 2.5rem;
+      @include m.gradient-text();
+    }
+  }
+
+  &__subtitle { font-size: 1.2rem; color: v.$color-text-soft; }
+  &__text { font-size: 1rem; color: v.$color-text; }
+}
+
+/* Footer */
+.footer {
+  &__text {
+    text-align: center;
+    margin-top: v.$space-2;
+    color: #ccc;
+  }
+}

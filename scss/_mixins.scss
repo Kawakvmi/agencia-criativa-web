@@ -1,0 +1,48 @@
+@use "variaveis" as v;
+
+// Gradiente aplicado ao texto
+@mixin gradient-text($from: v.$brand-from, $to: v.$brand-to) {
+  background: linear-gradient(to right, $from, $to);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// Cartão “glass”
+@mixin glass($alpha: v.$alpha-05) {
+  background: rgba(255, 255, 255, $alpha);
+  backdrop-filter: blur(v.$glass-blur);
+  box-shadow: v.$shadow-strong;
+  border-radius: v.$radius;
+}
+
+// Botão básico reutilizável
+@mixin button($from: v.$brand-from, $to: v.$brand-to) {
+  background: linear-gradient(to right, $from, $to);
+  border: none;
+  color: v.$color-white;
+  padding: v.$space-0-75;
+  font-size: 1rem;
+  border-radius: v.$radius-sm;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: linear-gradient(to right, $to, $from);
+  }
+}
+
+// Centralização flex
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Utilitário de responsividade
+@mixin up-to($bp) {
+  $value: map-get(v.$breakpoints, $bp);
+  @media (max-width: $value) {
+    @content;
+  }
+}

@@ -1,0 +1,14 @@
+@use "variaveis" as v;
+
+/* Reset e base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: v.$font-base;
+  line-height: 1.6;
+  background: linear-gradient(135deg, v.$bg-1, v.$bg-2, v.$bg-3);
+  color: v.$color-white;
+  padding: v.$space-2;
+}

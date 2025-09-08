@@ -1,0 +1,55 @@
+@use "variaveis" as v;
+@use "mixins" as m;
+
+/* Grid de serviços (BEM: .servicos__grid, .servico) */
+.servicos__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: v.$space-1-5;
+}
+
+.servico {
+  background: rgba(255, 255, 255, v.$alpha-07);
+  padding: v.$space-1-5;
+  border-radius: v.$radius - 4px; // operador
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Depoimento */
+.depoimento {
+  background: rgba(255, 255, 255, v.$alpha-07);
+  padding: v.$space;
+  margin-bottom: v.$space;
+  border-left: 4px solid v.$brand-from;
+  border-radius: v.$radius-sm;
+}
+
+/* Formulário */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space;
+
+  &__input,
+  &__textarea {
+    padding: v.$space-0-75;
+    border-radius: v.$radius-sm;
+    border: none;
+    font-size: 1rem;
+  }
+
+  &__textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  &__button {
+    @include m.button();
+  }
+}

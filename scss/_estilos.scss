@@ -1,0 +1,6 @@
+/* Ordem: variáveis > mixins > base > layout > componentes */
+@use "variaveis";
+@use "mixins";
+@use "base";
+@use "layout";
+@use "componentes";
